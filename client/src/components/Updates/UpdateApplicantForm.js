@@ -12,7 +12,7 @@ const UpdateApplicantForm = () => {
         e.preventDefault()
         const email = document.getElementById("email").value
         if (email !== "") {
-            await axios.get(`https://ats-be.onrender.com/singleApplicant/${email}`).then(res => {
+            await axios.get(`https://ats-be-plpb.onrender.com/singleApplicant/${email}`).then(res => {
                 dispatch(GetApplicant(res.data))
             }).then(res=>console.log(res))
             .catch(err=>console.log(err.message))

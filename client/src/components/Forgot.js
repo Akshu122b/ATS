@@ -14,7 +14,7 @@ const Forgot = () => {
                 setMsg({c_password:"Password should match with confirm password"})
             }else{
                 setMsg({})
-                await axios.patch(`https://ats-be.onrender.com/admin/forgot_password/${email}`,formData)
+                await axios.patch(`https://ats-be-plpb.onrender.com/admin/forgot_password/${email}`,formData)
                 .then(res=>res.data)
                 .catch(err=>setMsg({email:"Invalid email.Please enter valid email"}))
             }

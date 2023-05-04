@@ -10,7 +10,7 @@ function ConfirmModel({ _id, commentId, commentOne }) {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     const handleEdit = async () => {
-        await axios.patch("https://ats-be.onrender.com/comment", {
+        await axios.patch("https://ats-be-plpb.onrender.com/comment", {
             id: _id,
             commentId: commentId,
             comment: commentP

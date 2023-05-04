@@ -15,7 +15,7 @@ const SingleApplicantView = () => {
     const { id } = useParams()
     const dispatch = useDispatch()
     useEffect(() => {
-        axios.get(`https://ats-be.onrender.com/applicant/id/${id}`).then(res => setAppData(res.data)).catch(err => console.log(err.message))
+        axios.get(`https://ats-be-plpb.onrender.com/applicant/id/${id}`).then(res => setAppData(res.data)).catch(err => console.log(err.message))
         // dispatch(GetApplicantById(id)).then(res => setAppData(res.payload))
     }, [dispatch, id])
     const [update, setUpdate] = useState(false)
@@ -34,7 +34,7 @@ const SingleApplicantView = () => {
             const data = {
                 ...postData, email: document.getElementById("emailId").value, cRound: document.getElementById("cRound").value
             }
-            await axios.put("https://ats-be.onrender.com/appicant/update/comments", data, config)
+            await axios.put("https://ats-be-plpb.onrender.com/appicant/update/comments", data, config)
                 .then((res) => {
                     alert("status updated successfully")
                     window.location.reload(false)
@@ -79,7 +79,7 @@ const SingleApplicantView = () => {
     }
     ///delete Applicant 
     const deleteApplicant = async () => {
-        await axios.delete(`https://ats-be.onrender.com/applicant/delete/${appData._id}`)
+        await axios.delete(`https://ats-be-plpb.onrender.com/applicant/delete/${appData._id}`)
             .then(res => {
                 alert(`Applicant ${appData.name} deleted successfully`)
                 navigator("/")

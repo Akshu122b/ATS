@@ -95,7 +95,7 @@ const AddApplicant = () => {
       console.log(formData)
       // await axios.post("http://localhost:9005/applicant/add",formData)
 
-      await axios.post("https://ats-be.onrender.com/applicant/add", formData)
+      await axios.post("https://ats-be-plpb.onrender.com/applicant/add", formData)
         .then(res =>{
           dispatch(fetchApplicants())
           alert(`New Applicant Added Successfully`)

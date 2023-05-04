@@ -14,7 +14,7 @@ const UpdateOneApp = () => {
             setEmailErr("Please enter email of the applicant.")
         } else {
             try {
-                const data = await axios.get(`https://ats-be.onrender.com/singleApplicant/${email}`).then(res => res.data)
+                const data = await axios.get(`https://ats-be-plpb.onrender.com/singleApplicant/${email}`).then(res => res.data)
                 setData(data)
                 setEmailErr(null)
                 console.log(data)
