@@ -1,0 +1,38 @@
+*{
+    padding: 0px;
+    margin: 0px;
+
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+.header{
+    height: 10vh;
+    width: 100%;
+    background-color: #333;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.fixed_header{
+    position: fixed;
+}
+.header::after{
+    position:fixed;
+}
+.header_ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:0px 20px;
+    font-weight: 500;
+    width:100%;
+    color: white;
+    /* border: 2px solid green; */
+}
+.header_ul li{
+    list-style-type: none;
+    padding: 10px;
+    cursor: pointer;
+}
